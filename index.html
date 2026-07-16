@@ -2,30 +2,182 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>هنرکده حمید</title>
+
 <style>
-body{margin:0;font-family:tahoma;background:#111;color:#fff}
-.wrap{max-width:700px;margin:auto;padding:24px}
-.card{background:#1d1d1d;border-radius:18px;padding:24px;box-shadow:0 0 20px #000}
-h1{color:#ffcc33}
-a.btn{display:block;text-decoration:none;color:#fff;padding:14px;margin:10px 0;border-radius:12px;text-align:center;font-weight:bold}
-.call{background:#2e7d32}.wa{background:#25D366}.tg{background:#229ED9}.ig{background:#C13584}.map{background:#ff9800}
-.small{opacity:.8;font-size:14px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+background:#0d0d0d;
+font-family:tahoma;
+color:#fff;
+display:flex;
+justify-content:center;
+padding:25px;
+}
+
+.card{
+width:100%;
+max-width:430px;
+background:#1b1b1b;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 0 30px rgba(255,180,0,.25);
+}
+
+.header{
+padding:20px;
+text-align:center;
+background:linear-gradient(135deg,#111,#222);
+}
+
+.logo{
+width:100%;
+border-radius:15px;
+}
+
+h1{
+margin-top:15px;
+font-size:34px;
+color:#FFD54F;
+}
+
+.subtitle{
+margin-top:8px;
+font-size:18px;
+color:#ddd;
+}
+
+.content{
+padding:20px;
+line-height:2;
+}
+
+.address{
+background:#2b2b2b;
+padding:15px;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+.btn{
+display:block;
+text-align:center;
+text-decoration:none;
+padding:16px;
+border-radius:14px;
+font-size:20px;
+font-weight:bold;
+color:white;
+margin-bottom:14px;
+transition:.25s;
+}
+
+.btn:hover{
+transform:scale(1.03);
+}
+
+.call{background:#2E7D32;}
+.whatsapp{background:#25D366;}
+.telegram{background:#229ED9;}
+.instagram{
+background:linear-gradient(45deg,#833ab4,#fd1d1d,#fcb045);
+}
+.map{background:#ff9800;}
+.save{background:#673ab7;}
+.share{background:#00acc1;}
+
+.footer{
+padding:20px;
+text-align:center;
+font-size:14px;
+color:#aaa;
+}
 </style>
+
+<script>
+function shareCard(){
+
+if(navigator.share){
+navigator.share({
+title:"هنرکده حمید",
+text:"تولید کننده تخصصی تنپوش های عروسکی",
+url:window.location.href
+});
+}else{
+alert("مرورگر شما از اشتراک گذاری مستقیم پشتیبانی نمی کند.");
+}
+
+}
+</script>
+
 </head>
+
 <body>
-<div class="wrap">
+
 <div class="card">
+
+<div class="header">
+
+<img src="logo.png" class="logo">
+
 <h1>🎭 هنرکده حمید</h1>
-<p>تولید تخصصی تنپوش‌های عروسکی تبلیغاتی</p>
-<p><b>📍 آدرس:</b><br>کرج، بلوار بهشتی، روبروی خیابان امامزاده محمد، پاساژ رضا، طبقه زیر همکف، پلاک ۳</p>
-<a class="btn call" href="tel:+989124665538">📞 تماس: 09124665538</a>
-<a class="btn wa" href="https://wa.me/989124665538">🟢 واتساپ</a>
-<a class="btn tg" href="https://t.me/Hamidreza5538">✈️ تلگرام</a>
-<a class="btn ig" href="https://instagram.com/hamid_jabbari_art_school">📸 اینستاگرام</a>
-<a class="btn map" href="https://maps.google.com/?q=کرج بلوار بهشتی پاساژ رضا">🗺️ مسیریابی</a>
-<p class="small">نسخه اولیه - قابل توسعه با گالری، QR Code و فرم سفارش</p>
+
+<div class="subtitle">
+تولید کننده تخصصی تنپوش های عروسکی تبلیغاتی
 </div>
+
 </div>
-</body></html>
+
+<div class="content">
+
+<div class="address">
+
+📍 کرج، بلوار بهشتی، روبروی خیابان امامزاده محمد<br>
+
+پاساژ رضا، طبقه زیر همکف، پلاک ۳
+
+</div>
+
+<a class="btn call" href="tel:+989124665538">
+📞 تماس
+</a>
+
+<a class="btn whatsapp" href="https://wa.me/989124665538">
+🟢 واتساپ
+</a>
+
+<a class="btn telegram" href="https://t.me/Hamidreza5538">
+✈️ تلگرام
+</a>
+
+<a class="btn instagram" href="https://instagram.com/hamid_jabbari_art_school">
+📸 اینستاگرام
+</a>
+
+<a class="btn map"
+href="https://maps.google.com/?q=کرج بلوار بهشتی پاساژ رضا">
+🗺️ مسیریابی
+</a>
+
+<a class="btn save" href="contact.vcf">
+💾 ذخیره مخاطب
+</a>
+
+<a class="btn share" href="#" onclick="shareCard()">
+📤 اشتراک گذاری
+</a>
+
+</div>
+
+<div class="footer">
+
+© هنرکده حمید
+
+</div>
+
+</div>
+
+</body>
+
+</html>
